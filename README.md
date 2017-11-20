@@ -7,15 +7,16 @@
 
 ## Commands
 
-```
-CGO_ENABLED=0 GOOS=linux go build -o hello
+```sh
+make image
 
-docker build -t demo/hello .
-
-docker run -d -P demo/hello
+docker run -d -p 8080:8080 demo/hello
 ```
 
-Or just run `./app.sh`
+## Updates
+
+* `Makefile`, Ref. [blog](https://medium.com/smsjunk/an-in-depth-look-at-our-docker-and-ecs-stack-for-golang-b89dfe7cff5c)
+* [Multi-stages build](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)
 
 ## License
 
